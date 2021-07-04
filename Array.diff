@@ -1,0 +1,5 @@
+#Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+def array_diff(a, b):
+    #your code here
+    return [item for item in a if item not in b]
