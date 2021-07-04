@@ -1,0 +1,19 @@
+from operator import add
+def tickets(people):
+	deposit = [0,0,0]
+	print(people)
+	for p in people:
+		if p == 25:
+			deposit = list(map(add, deposit, [1,0,0]))
+		elif p == 50:
+			deposit = list(map(add, deposit, [-1,1,0]))
+		else:
+			if deposit[0] >=1 and deposit[1] >=1:
+				deposit = list(map(add, deposit, [-1,-1,0]))
+			elif deposit[1] == 0 and deposit[0] >=3:
+				deposit = list(map(add, deposit, [-3, 0, 0]))
+			else:
+				deposit = list(map(add, deposit, [-3, 0, 0]))
+		print(deposit)
+		if deposit[0] < 0 or deposit[1] < 0 or deposit[2] < 0: return 'NO'
+	return 'YES'
