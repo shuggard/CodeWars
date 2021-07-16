@@ -1,0 +1,5 @@
+#Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+def shortcut( s ):
+    list = [x for x in s if x not in ['a','e','i','o','u']]
+    return ''.join(list)
