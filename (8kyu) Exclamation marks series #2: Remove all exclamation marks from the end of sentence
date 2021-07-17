@@ -1,4 +1,4 @@
-i#Remove all exclamation marks from the end of sentence.
+#Remove all exclamation marks from the end of sentence.
 
 def remove(s):
     while s.endswith("!"): 
